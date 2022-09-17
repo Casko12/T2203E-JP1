@@ -28,13 +28,27 @@ public class Demo {
         b.run();
         System.out.println(Car.color);
 
-        TamGiac t = new TamGiac();
-        TamGiac t2 = new TamGiac();
-        t.setCanh1(4);
-        t2.setCanh1(10);
-        t.setCanh2(5);
-        t.setCanh3(6);
-        System.out.println("Chu vi:"+t.chuVi());
-        System.out.println("Dien tich:"+t.dienTich());
+//        TamGiac t = new TamGiac();
+//        TamGiac t2 = new TamGiac();
+//        t.setCanh1(4);
+//        t2.setCanh1(10);
+//        t.setCanh2(5);
+//        t.setCanh3(6);
+//        System.out.println("Chu vi:"+t.chuVi());
+//        System.out.println("Dien tich:"+t.dienTich());
+
+        PhanSo f1 = new PhanSo();
+        f1.setTuso(1);
+        f1.setMauso(2);
+        f1.inPhanSo();
+
+        PhanSo f2 = new PhanSo();
+        f2.setTuso(3);
+        f2.setMauso(4);
+        f2.inPhanSo();
+
+        PhanSo t = f1.add(f2);
+        t.rutGon();
+        t.inPhanSo();
     }
 }

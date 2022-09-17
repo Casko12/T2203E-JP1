@@ -10,7 +10,7 @@ public class PhanSo {
         return tuSo;
     }
 
-    public void setTuso(int tuso) {
+    public void setTuso(int tuSo) {
         this.tuSo = tuSo;
     }
 
@@ -18,7 +18,7 @@ public class PhanSo {
         return mauSo;
     }
 
-    public void setMauso(int mauso) {
+    public void setMauso(int mauSo) {
         this.mauSo = mauSo;
     }
 
