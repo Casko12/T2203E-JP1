@@ -27,7 +27,8 @@ public class PhanSo {
     }
 
     public int UCLN(){
-        if(!ktPhanSo()) return 0;
+        if(! ktPhanSo()) return 0;
+
     }
 
 
