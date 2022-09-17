@@ -52,8 +52,12 @@ public class PhanSo {
         tong.rutGon(); //rut gon tong sau khi cong
         return tong;
     }
-    public void sub(){
-
+    public PhanSo sub(PhanSo f){
+        PhanSo hieu = new PhanSo();
+        hieu.tuSo = this.tuSo*f.mauSo - this.mauSo*f.tuSo;
+        hieu.mauSo = this.mauSo*f.mauSo;
+        hieu.rutGon(); //rut gon hieu sau khi cong
+        return hieu;
     }
     public void mul(){
 
