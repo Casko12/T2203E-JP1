@@ -1,5 +1,7 @@
 package Session1;
 
+import java.util.Scanner;
+
 public class Demo {
     public static void main(String[] args){
         System.out.println("Hello world!");
@@ -37,14 +39,15 @@ public class Demo {
 //        System.out.println("Chu vi:"+t.chuVi());
 //        System.out.println("Dien tich:"+t.dienTich());
 
+        Scanner sc = new Scanner(System.in); // tao scanner de nhap
         PhanSo f1 = new PhanSo();
-        f1.setTuso(1);
-        f1.setMauso(2);
+        f1.setTuso(sc.nextInt()); // nhap tu so f1
+        f1.setMauso(sc.nextInt());
         f1.inPhanSo();
 
         PhanSo f2 = new PhanSo();
-        f2.setTuso(3);
-        f2.setMauso(4);
+        f2.setTuso(sc.nextInt());
+        f2.setMauso(sc.nextInt());
         f2.inPhanSo();
 
         PhanSo t = f1.add(f2);
