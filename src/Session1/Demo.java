@@ -53,5 +53,17 @@ public class Demo {
         PhanSo t = f1.add(f2);
         t.rutGon();
         t.inPhanSo();
+
+        PhanSo t1 = f1.sub(f2);
+        t1.rutGon();
+        t1.inPhanSo();
+
+        PhanSo t2 = f1.mul(f2);
+        t2.rutGon();
+        t2.inPhanSo();
+
+        PhanSo t3 = f1.div(f2);
+        t3.rutGon();
+        t3.inPhanSo();
     }
 }
