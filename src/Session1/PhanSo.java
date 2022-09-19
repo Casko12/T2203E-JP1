@@ -59,10 +59,18 @@ public class PhanSo {
         hieu.rutGon(); //rut gon hieu sau khi cong
         return hieu;
     }
-    public void mul(){
-
+    public PhanSo mul(PhanSo f){
+        PhanSo tich = new PhanSo();
+        tich.tuSo = this.tuSo*f.tuSo;
+        tich.mauSo = this.mauSo*f.mauSo;
+        tich.rutGon();
+        return tich;
     }
-    public void div(){
-
+    public PhanSo div(PhanSo f){
+        PhanSo thuong = new PhanSo();
+        thuong.tuSo = this.tuSo*f.mauSo;
+        thuong.mauSo = this.mauSo*f.tuSo;
+        thuong.rutGon();
+        return thuong;
     }
 }
