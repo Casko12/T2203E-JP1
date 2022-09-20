@@ -50,19 +50,22 @@ public class Account {
     public void hienThiAccount(){
         System.out.println(getId() + getName() + getBalance());
     }
-    public void credit(int amount){
-        if (amount <= 0) return;
+    public boolean credit(int amount){
+        if (amount <= 0) return false;
             balance += amount;
+            return true;
     }
 
-    public void debit(int amount){
-        if (amount <=0 || amount > balance) return;
+    public boolean debit(int amount){
+        if (amount <=0 || amount > balance) return false;
             balance -= amount;
+            return true;
     }
 
-    public void transferTo(Account account, int amount) {
-        if (amount <=0 || amount > balance) return;
+    public boolean transferTo(Account account, int amount) {
+        if (amount <=0 || amount > balance) return false;
         account.balance += amount;
         balance -= amount;
+        return true;
     }
 }

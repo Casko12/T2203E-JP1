@@ -4,13 +4,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Account[] accounts = new Account[50];
-        accounts[0] = new Account ("123456789","Pham Duy Hung",5000000);
-        accounts[1] = new Account ("987654321","Tran Van Thanh",10000000);
-        accounts[0].hienThiAccount();
-        accounts[1].hienThiAccount();
-
+        Account myAccount = new Account("123456789","Pham Duy Hung",5000000);
+        Account myAccount2 = new Account ("987654321","Tran Van Thanh",10000000);
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("Nhap so tien muon rut");
+        int x = sc.nextInt();
+        if(myAccount.debit(x)){
+            System.out.println("Rut thanh cong"+x);
+        }else{
+            System.out.println("So du tai khoan khong du hoac nhap sai so tien");
+        }
+        if(myAccount.transferTo(myAccount2, 3000000)){
+            System.out.println("Chuyen thanh cong"+x+"sang tai khoan"+myAccount2.getName());
+        }else{
+            System.out.println("Chuyen khoan that bai");
+        }
     }
 }
