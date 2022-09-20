@@ -37,4 +37,19 @@ public class Bank {
         this.name = name;
         this.balance = balance;
     }
+    public void credit(int c){
+        if (c <= 0) {
+            System.out.println("Số tiền nạp vào tài khoản phải lớn hơn 0");
+        }else
+            balance = balance + c;
+    }
+
+    public void debit(int d){
+        if (d <= balance){
+            balance = balance - d;
+            System.out.println(getBalance());
+
+        }else
+            System.out.println("Tài khoản không đủ tiền!");
+    }
 }
