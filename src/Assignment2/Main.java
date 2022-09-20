@@ -15,7 +15,7 @@ public class Main {
             System.out.println("So du tai khoan khong du hoac nhap sai so tien");
         }
         if(myAccount.transferTo(myAccount2, 3000000)){
-            System.out.println("Chuyen thanh cong"+x+"sang tai khoan"+myAccount2.getName());
+            System.out.println("Chuyen thanh cong sang tai khoan"+myAccount2.getName());
         }else{
             System.out.println("Chuyen khoan that bai");
         }
