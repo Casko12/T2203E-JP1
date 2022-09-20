@@ -18,6 +18,7 @@ public class Main {
         }
         if(myAccount.transferTo(myAccount2, y)){
             System.out.println("Chuyen thanh cong sang tai khoan "+myAccount2.getName());
+            System.out.println("So du con lai: "+myAccount.getBalance());
         }else{
             System.out.println("Chuyen khoan that bai");
         }
