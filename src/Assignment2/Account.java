@@ -48,32 +48,21 @@ public class Account {
     }
 
     public void hienThiAccount(){
-        System.out.println(getId()+getName()+getBalance());
+        System.out.println(getId() + getName() + getBalance());
     }
-    public void credit(int c){
-        if (c <= 0) {
-            System.out.println("Số tiền nạp vào tài khoản phải lớn hơn 0");
-        }else
-            balance = balance + c;
+    public void credit(int amount){
+        if (amount <= 0) return;
+            balance += amount;
     }
 
-    public void debit(int d){
-        if (d <= balance){
-            balance = balance - d;
-            System.out.println(getBalance());
-
-        }else
-            System.out.println("Tài khoản không đủ tiền!");
+    public void debit(int amount){
+        if (amount <=0 || amount > balance) return;
+            balance -= amount;
     }
 
-//    public Account transfer (Account f) {
-//        if (transferAmount <= 0) {
-//            System.out.println("Số tiền cần chuyển phải lớn hơn 0!");
-//        }
-//        if (transferAmount > this.balance) {
-//            System.out.println("Số tiền cần chuyển lớn hơn số dư trong tài khoản!");
-//        }else{
-//
-//        }
-//    }
+    public void transferTo(Account account, int amount) {
+        if (amount <=0 || amount > balance) return;
+        account.balance += amount;
+        balance -= amount;
+    }
 }
