@@ -1,12 +1,13 @@
 package Assignment2;
 
-public class Bank {
-    public Bank() {
+public class Account {
+    public Account() {
 
     }
     public String id;
     public String name;
     public int balance;
+    public int transferAmount;
 
     public String getId() {
         return id;
@@ -32,10 +33,22 @@ public class Bank {
         this.balance = balance;
     }
 
-    public Bank(String id, String name, int balance) {
+    public int getTransferAmount() {
+        return transferAmount;
+    }
+
+    public void setTransferAmount(int transferAmount) {
+        this.transferAmount = transferAmount;
+    }
+
+    public Account(String id, String name, int balance) {
         this.id = id;
         this.name = name;
         this.balance = balance;
+    }
+
+    public void hienThiAccount(){
+        System.out.println(getId()+getName()+getBalance());
     }
     public void credit(int c){
         if (c <= 0) {
@@ -52,4 +65,15 @@ public class Bank {
         }else
             System.out.println("Tài khoản không đủ tiền!");
     }
+
+//    public Account transfer (Account f) {
+//        if (transferAmount <= 0) {
+//            System.out.println("Số tiền cần chuyển phải lớn hơn 0!");
+//        }
+//        if (transferAmount > this.balance) {
+//            System.out.println("Số tiền cần chuyển lớn hơn số dư trong tài khoản!");
+//        }else{
+//
+//        }
+//    }
 }
