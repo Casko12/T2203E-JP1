@@ -1,4 +1,4 @@
 package Assignment3;
 
-public class KhachVietNam {
+public class KhachVietNam extends KhachHang {
 }
