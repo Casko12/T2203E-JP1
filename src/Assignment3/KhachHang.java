@@ -48,4 +48,8 @@ public class KhachHang {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public int thanhTien(int dinhMuc){
+        return quantity*dinhMuc;
+    }
 }
