@@ -49,7 +49,7 @@ public class KhachHang {
         this.quantity = quantity;
     }
 
-    public int thanhTien(int dinhMuc){
-        return quantity*dinhMuc;
+    public int thanhTien(int gia) {
+        return quantity * gia;
     }
 }
