@@ -4,32 +4,25 @@ import java.util.ArrayList;
 public class PhoneNumber {
     String name;
     ArrayList<String> phone;
-    public ArrayList<PhoneNumber> PhoneList;
-    @Override
-    public void insertPhone() {
-        for (PhoneNumber pl: PhoneList){
-            if (pl.name != pl.name)
 
-        }
+    public PhoneNumber (String name, String phone){
+        this.name= name;
+        this.phone = new ArrayList<>();
+        this.phone.add(phone);
+    }
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public void removePhone() {
-
+    public void setName(String name) {
+        this.name = name;
     }
 
-    @Override
-    public void updatePhone() {
-
+    public ArrayList<String> getPhone() {
+        return phone;
     }
 
-    @Override
-    public void searchPhone() {
-
-    }
-
-    @Override
-    public void sort() {
-
+    public void setPhone(ArrayList<String> phone) {
+        this.phone = phone;
     }
 }
