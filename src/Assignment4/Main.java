@@ -9,5 +9,7 @@ public class Main {
         pb.insertPhone("Hung4","123456783");
         pb.insertPhone("Hung5","123456784");
         System.out.println(pb.PhoneList.size());
+        pb.updatePhone("Hung3","123456782","12345677");
+
     }
 }
