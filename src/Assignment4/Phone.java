@@ -1,6 +1,6 @@
 package Assignment4;
 
-public class Phone {
+public abstract class Phone {
     public String name;
     public String phone;
 
