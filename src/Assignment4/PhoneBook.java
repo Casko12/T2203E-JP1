@@ -1,6 +1,5 @@
 package Assignment4;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -51,9 +50,9 @@ public class PhoneBook extends Phone {
     }
 
     @Override
-    PhoneNumber searchPhone (String name) {
-        for (PhoneNumber p: PhoneList) {
-            if (p.getName().equals(name)) {
+    PhoneNumber searchPhone(String name) {
+        for(PhoneNumber p : PhoneList) {
+            if(p.getName().equals(name)){
                 return p;
             }
         }
@@ -61,13 +60,11 @@ public class PhoneBook extends Phone {
     }
 
     @Override
-    public void sort() {
+    void sort() {
         Collections.sort(PhoneList, new Comparator<PhoneNumber>() {
             @Override
             public int compare(PhoneNumber o1, PhoneNumber o2) {
-                return o1.getName().compareTo(o2.getName()){
-
-                }
+                return o1.getName().compareTo(o2.getName());
             }
         });
     }

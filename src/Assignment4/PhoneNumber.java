@@ -1,15 +1,18 @@
 package Assignment4;
 import java.util.ArrayList;
 
+import java.util.ArrayList;
+
 public class PhoneNumber {
     String name;
     ArrayList<String> phone;
 
-    public PhoneNumber (String name, String phone){
-        this.name= name;
+    public PhoneNumber(String name,String phone) {
+        this.name = name;
         this.phone = new ArrayList<>();
         this.phone.add(phone);
     }
+
     public String getName() {
         return name;
     }
@@ -22,7 +25,4 @@ public class PhoneNumber {
         return phone;
     }
 
-    public void setPhone(ArrayList<String> phone) {
-        this.phone = phone;
-    }
 }
