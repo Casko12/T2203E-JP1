@@ -1,6 +1,6 @@
 package Assignment5;
 
-public abstract class News implements INews{
+public class News implements INews{
 //    public class News(){
 //
 //    }
