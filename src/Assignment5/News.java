@@ -53,7 +53,12 @@ public class News implements INews{
         return AverageRate;
     }
 
-    public News() {
+    public News(int ID, String title, String publishDate, String author, String content) {
+        this.ID = ID;
+        Title = title;
+        PublishDate = publishDate;
+        Author = author;
+        Content = content;
     }
 
     @Override
