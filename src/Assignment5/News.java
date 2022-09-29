@@ -4,12 +4,12 @@ public abstract class News implements INews{
 //    public class News(){
 //
 //    }
-    public int ID;
-    public String Title;
-    public String PublishDate;
-    public String Author;
-    public String Content;
-    public float AverageRate;
+    int ID;
+    String Title;
+    String PublishDate;
+    String Author;
+    String Content;
+    float AverageRate;
 
     public int getID() {
         return ID;
@@ -52,8 +52,23 @@ public abstract class News implements INews{
         return AverageRate;
     }
 
-    public void setAverageRate(float averageRate) {
-        AverageRate = averageRate;
+    public News() {
     }
 
+    @Override
+    public void Display() {
+        System.out.println(ID);
+        System.out.println(Title);
+        System.out.println(PublishDate);
+        System.out.println(Author);
+        System.out.println(Content);
+        System.out.println(AverageRate);
+    }
+    public void Calculate(){
+        float t = 0;
+        for (int r:RateList){
+            t+=r;
+        }
+        AverageRate = t/3;
+    }
 }
