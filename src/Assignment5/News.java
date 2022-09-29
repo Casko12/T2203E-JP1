@@ -10,6 +10,7 @@ public class News implements INews{
     String Author;
     String Content;
     float AverageRate;
+    int [] RateList = new int[3];
 
     public int getID() {
         return ID;
@@ -64,11 +65,12 @@ public class News implements INews{
         System.out.println(Content);
         System.out.println(AverageRate);
     }
-    public void Calculate(){
+    public News Calculate(){
         float t = 0;
         for (int r:RateList){
             t+=r;
         }
         AverageRate = t/3;
+        return this;
     }
 }
