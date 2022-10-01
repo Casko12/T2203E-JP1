@@ -40,7 +40,7 @@ public class Controller {
         try {
             Integer nAge = Integer.parseInt(ag);
             if(nAge <= 0 || nAge>100)
-                throw new Exception("Vui lòng nhập tuổi hợp lệ");
+                throw new Exception("Vui lòng nhập tuổi hợp lệ!");
             txAge.setText(nAge.toString());
             noticetxAge.setVisible(false);
         }catch (Exception e){
