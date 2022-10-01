@@ -26,6 +26,7 @@ public class Controller {
             txFullName.setText(fn);
             noticetxFullName.setVisible(false);
         }
+
         String em = txtEmail.getText();
         if(em.isEmpty() || !em.contains("@") || em.startsWith("@") || em.endsWith("@")){ //phai chứa @, @ k dc o dau va k dc o cuoi
             noticetxEmail.setText("Vui lòng nhập Email hợp lệ!");
@@ -34,6 +35,7 @@ public class Controller {
             txEmail.setText(em);
             noticetxEmail.setVisible(false);
         }
+
         String ag = txtAge.getText();
         try {
             Integer nAge = Integer.parseInt(ag);
@@ -45,6 +47,7 @@ public class Controller {
             noticetxAge.setText(e.getMessage());
             noticetxAge.setVisible(true);
         }
+
         String ad = txtAddress.getText();
         if(ad.isEmpty()){
             noticetxAddress.setText("Vui lòng nhập địa chỉ!");
