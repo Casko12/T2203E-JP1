@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:controller="javafx.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.Controller">
    <children>
       <TextField fx:id="txtFullName" layoutX="123.0" layoutY="59.0" promptText="Name" />
       <TextField fx:id="txtEmail" layoutX="123.0" layoutY="131.0" promptText="Email" />
@@ -15,6 +15,10 @@
       <Text fx:id="txEmail" layoutX="123.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="186.134765625" />
       <Text fx:id="txAge" layoutX="123.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age" wrappingWidth="72.0" />
       <Text fx:id="txAddress" layoutX="123.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="186.134765625" />
-      <Button onAction="#handleSubmit" layoutX="277.0" layoutY="345.0" mnemonicParsing="false" text="Submit" />
+      <Button layoutX="277.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" />
+      <Text fx:id="noticetxFullName" fill="#e10000" layoutX="344.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vui long dien day du thong tin!" visible="false" />
+      <Text fx:id="noticetxEmail" fill="#e10000" layoutX="344.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vui long dien day du thong tin!" visible="false" />
+      <Text fx:id="noticetxAge" fill="#e10000" layoutX="344.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vui long dien day du thong tin!" visible="false" />
+      <Text fx:id="noticetxAddress" fill="#e10000" layoutX="344.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vui long dien day du thong tin!" visible="false" wrappingWidth="206.82861328125" />
    </children>
 </Pane>
