@@ -4,6 +4,9 @@ public class PhoneNumber {
     String name;
     String phone;
 
+    public PhoneNumber() {
+    }
+
     public String getName() {
         return name;
     }
@@ -20,7 +23,12 @@ public class PhoneNumber {
         this.phone = phone;
     }
 
-   public String toString(){
+    public PhoneNumber(String name, String phone) {
+        this.name = name;
+        this.phone = phone;
+    }
+
+    public String toString(){
         return getName()+"-"+getPhone();
    }
 
