@@ -18,7 +18,7 @@ public class ContactController {
             if(txtName.getText().isEmpty() || txtPhone.getText().isEmpty()){
                 throw new Exception("Vui lòng nhập đủ tên và só điện thoại");
             }
-            phoneList.add(new PhoneNumber(txtName.getText(),txtPhone.getText()));
+
             updatePhone();
             printResult();
         }catch (Exception e){
