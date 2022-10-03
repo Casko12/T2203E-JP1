@@ -13,7 +13,7 @@
       <TextField fx:id="txtStMark" layoutX="27.0" layoutY="185.0" promptText="Mark" />
       <Text fx:id="error" fill="#e10a0a" layoutX="27.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="186.134765625" />
       <Button onAction="#addStudent" layoutX="88.0" layoutY="258.0" mnemonicParsing="false" text="Submit" />
-      <ListView layoutX="319.0" layoutY="49.0" prefHeight="313.0" prefWidth="256.0" />
+      <ListView fx:id="st" layoutX="319.0" layoutY="49.0" prefHeight="313.0" prefWidth="256.0" />
       <Button layoutX="476.0" layoutY="14.0" mnemonicParsing="false" text="Button1" />
       <Button layoutX="358.0" layoutY="14.0" mnemonicParsing="false" text="Button2" />
    </children>
