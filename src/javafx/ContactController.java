@@ -19,11 +19,16 @@ public class ContactController {
                 throw new Exception("Vui lòng nhập đủ tên và só điện thoại");
             }
             phonelist.add(new PhoneNumber(txtName.getText(),txtPhone.getText()));
+            printResult();
         }catch (Exception e){
             errors.setText(e.getMessage());
             errors.setVisible(true);
         }
-
+    }
+    public void printResult(){
+        for (PhoneNumber p: phonelist){
+            result.setText(result.getText()+p.toString());
+        }
     }
 
 }

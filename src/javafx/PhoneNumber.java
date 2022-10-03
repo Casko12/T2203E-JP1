@@ -29,7 +29,7 @@ public class PhoneNumber {
     }
 
     public String toString(){
-        return getName()+"-"+getPhone();
+        return getName()+"-"+getPhone()+"\n";
    }
 
 }
