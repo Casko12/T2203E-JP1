@@ -13,7 +13,7 @@ public class MarkController {
     public TextField txtStMark;
     public ListView<Student> st;
     public Text error;
-    private ObservableList<PhoneNumber> studentList = FXCollections.observableArrayList();
+    private ObservableList<Student> studentList = FXCollections.observableArrayList();
 
     public void addStudent(){
         try{
