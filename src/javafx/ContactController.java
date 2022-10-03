@@ -11,24 +11,38 @@ public class ContactController {
     public Text result;
     public Text errors;
 
-    private ArrayList<PhoneNumber> phonelist = new ArrayList<>();
+    private ArrayList<PhoneNumber> phoneList = new ArrayList<>();
     public void addContact(){
         try{
             errors.setVisible(false);
             if(txtName.getText().isEmpty() || txtPhone.getText().isEmpty()){
                 throw new Exception("Vui lòng nhập đủ tên và só điện thoại");
             }
-            phonelist.add(new PhoneNumber(txtName.getText(),txtPhone.getText()));
+            phoneList.add(new PhoneNumber(txtName.getText(),txtPhone.getText()));
+            updatePhone();
             printResult();
         }catch (Exception e){
             errors.setText(e.getMessage());
             errors.setVisible(true);
         }
     }
-    public void printResult(){
-        for (PhoneNumber p: phonelist){
-            result.setText(result.getText()+p.toString());
+    public void updatePhone(){
+        for (PhoneNumber p:phoneList){
+            if(p.getName().equals(txtName.getText())){
+                p.setPhone(txtPhone.getText());
+                return;
+            }
         }
+        phoneList.add(new PhoneNumber(txtName.getText(),txtPhone.getText()));
+    }
+
+
+    public void printResult(){
+        String txt = "";
+        for (PhoneNumber p: phoneList){
+            txt += p.toString();
+        }
+        result.setText(txt);
     }
 
 }
