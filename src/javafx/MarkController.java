@@ -3,14 +3,15 @@ package javafx;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 import java.awt.*;
 
 public class MarkController {
-    public TextField txtStName;
-    public TextField txtStEmail;
-    public TextField txtStMark;
+    public TextField txtName;
+    public TextField txtEmail;
+    public TextField txtMark;
     public ListView<Student> st;
     public Text error;
     private ObservableList<Student> studentList = FXCollections.observableArrayList();
@@ -18,7 +19,7 @@ public class MarkController {
     public void addStudent(){
         try{
             error.setVisible(false);
-            if(txtStName.getText().isEmpty() || txtStEmail.getText().isEmpty() || txtStMark.getText().isEmpty()){
+            if(txtName.getText().isEmpty() || txtEmail.getText().isEmpty() || txtMark.getText().isEmpty()){
                 throw new Exception("Vui lòng nhập đủ tên, email và điểm");
             }
             printResult();
