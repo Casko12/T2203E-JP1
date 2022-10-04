@@ -18,7 +18,8 @@ public class MarkController {
     public void addStudent(){
         try{
             error.setVisible(false);
-            if(txtName.getText().isEmpty() || txtEmail.getText().isEmpty() || txtMark.getText().isEmpty()){
+            Integer mark= Integer.parseInt(txtMark.getText());
+            if(txtName.getText().isEmpty() || txtEmail.getText().isEmpty() || txtMark.getText().isEmpty() || !txtEmail.getText().contains("@") || mark<0 ||mark >100){
                 throw new Exception("Vui lòng nhập đủ tên, email và điểm");
             }
             printResult();
