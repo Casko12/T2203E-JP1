@@ -27,7 +27,7 @@ public class MarkController {
             if(txtName.getText().isEmpty() || txtEmail.getText().isEmpty() || txtMark.getText().isEmpty() || !txtEmail.getText().contains("@") || mark<0 ||mark >100){
                 throw new Exception("Vui lòng nhập đủ tên, email và điểm");
             }
-            studentList.add(new Student(txtName.getText(), txtEmail.getText(), mark));
+            studentList.add(new Student(txtName.getText(), txtEmail.getText(), txtMark.getText()));
             st.setItems(studentList);
             st.refresh();
             clearInput();
