@@ -3,7 +3,7 @@ package javafx;
 public class Student {
     String name;
     String email;
-    String mark;
+    Integer mark;
 
     public Student() {
     }
@@ -24,15 +24,15 @@ public class Student {
         this.email = email;
     }
 
-    public String getMark() {
+    public Integer getMark() {
         return mark;
     }
 
-    public void setMark(String mark) {
+    public void setMark(Integer mark) {
         this.mark = mark;
     }
 
-    public Student(String name, String email, String mark) {
+    public Student(String name, String email, Integer mark) {
         this.name = name;
         this.email = email;
         this.mark = mark;

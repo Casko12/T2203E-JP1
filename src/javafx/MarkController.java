@@ -2,11 +2,10 @@ package javafx;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -17,7 +16,10 @@ public class MarkController {
     public TextField txtMark;
     public ListView<Student> st;
     public Text error;
+    public Button sortByName;
+    public Button sortByMark;
     private boolean sortName = true;
+    private boolean sortMark = true;
     private ObservableList<Student> studentList = FXCollections.observableArrayList();
 
     public void addStudent(){
@@ -27,7 +29,7 @@ public class MarkController {
             if(txtName.getText().isEmpty() || txtEmail.getText().isEmpty() || txtMark.getText().isEmpty() || !txtEmail.getText().contains("@") || mark<0 ||mark >100){
                 throw new Exception("Vui lòng nhập đủ tên, email và điểm");
             }
-            studentList.add(new Student(txtName.getText(), txtEmail.getText(), txtMark.getText()));
+            studentList.add(new Student(txtName.getText(), txtEmail.getText(), mark));
             st.setItems(studentList);
             st.refresh();
             clearInput();
@@ -35,7 +37,6 @@ public class MarkController {
             error.setText(e.getMessage());
             error.setVisible(true);
         }
-
     }
     public void clearInput(){
         txtName.setText("");
@@ -51,6 +52,16 @@ public class MarkController {
             }
         });
         sortName = !sortName;
+        st.refresh();
+    }
+    public void sortByMark(){
+        Collections.sort(studentList, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return sortMark?o1.getMark() - o2.getMark():o2.getMark()- o1.getMark();
+            }
+        });
+        sortMark = !sortMark;
         st.refresh();
     }
 
