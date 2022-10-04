@@ -6,7 +6,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-import java.awt.*;
 
 public class MarkController {
     public TextField txtName;
