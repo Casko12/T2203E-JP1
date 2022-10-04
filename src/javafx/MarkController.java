@@ -16,8 +16,6 @@ public class MarkController {
     public TextField txtMark;
     public ListView<Student> st;
     public Text error;
-    public Button sortByName;
-    public Button sortByMark;
     private boolean sortName = true;
     private boolean sortMark = true;
     private ObservableList<Student> studentList = FXCollections.observableArrayList();
