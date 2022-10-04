@@ -28,6 +28,7 @@ public class MarkController {
         }
     }
     public void printResult(){
+        studentList.add(new Student(txtName.getText(),txtEmail.getText(),txtMark.getText()));
         st.setItems(studentList);
         st.refresh();
     }
