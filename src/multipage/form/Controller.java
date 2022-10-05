@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import multipage.Main;
@@ -31,9 +32,9 @@ public class Controller {
             if(txtCode.getText().isEmpty() || txtName.getText().isEmpty() || txtHours.getText().isEmpty() ){
                 throw new Exception("Vui lòng điền đầy đủ thông tin!");
             }
-        subjectList.add(new SubjectList(txtCode.getText(),txtName.getText(),txtHours.getText()));
+            subjectList.add(new SubjectList(txtCode.getText(),txtName.getText(),txtHours.getText()));
 
-        clearInput();
+            clearInput();
         }catch (Exception e){
             error.setText(e.getMessage());
             error.setVisible(true);
