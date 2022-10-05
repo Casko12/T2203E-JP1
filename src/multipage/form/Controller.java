@@ -1,5 +1,7 @@
 package multipage.form;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import multipage.Main;
-import multipage.list.SubjectList;
+import multipage.SubjectList;
 
 public class Controller {
     public void backToList(ActionEvent actionEvent) throws Exception {
@@ -21,6 +23,7 @@ public class Controller {
     public TextField txtName;
     public TextField txtHours;
     public Text error;
+    private ObservableList<SubjectList> subjectList = FXCollections.observableArrayList();
 
     public void addSubject(){
         try{
@@ -28,6 +31,8 @@ public class Controller {
             if(txtCode.getText().isEmpty() || txtName.getText().isEmpty() || txtHours.getText().isEmpty() ){
                 throw new Exception("Vui lòng điền đầy đủ thông tin!");
             }
+        subjectList.add(new SubjectList(txtCode.getText(),txtName.getText(),txtHours.getText()));
+
         clearInput();
         }catch (Exception e){
             error.setText(e.getMessage());

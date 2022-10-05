@@ -1,4 +1,6 @@
-package multipage.list;
+package multipage;
+
+import javafx.scene.control.ListView;
 
 public class SubjectList {
     String code;

@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import multipage.Main;
+import multipage.SubjectList;
 
 import java.net.URL;
 import java.util.ResourceBundle;
