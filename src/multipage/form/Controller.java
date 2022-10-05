@@ -24,7 +24,8 @@ public class Controller {
     public TextField txtName;
     public TextField txtHours;
     public Text error;
-    private ObservableList<SubjectList> subjectList = FXCollections.observableArrayList();
+//    public ListView<SubjectList> lv;
+//    public ObservableList<SubjectList> subjectList = FXCollections.observableArrayList();
 
     public void addSubject(){
         try{
@@ -32,8 +33,9 @@ public class Controller {
             if(txtCode.getText().isEmpty() || txtName.getText().isEmpty() || txtHours.getText().isEmpty() ){
                 throw new Exception("Vui lòng điền đầy đủ thông tin!");
             }
-            subjectList.add(new SubjectList(txtCode.getText(),txtName.getText(),txtHours.getText()));
-
+//            subjectList.add(new SubjectList(txtCode.getText(),txtName.getText(),txtHours.getText()));
+//            lv.setItems(subjectList);
+//            lv.refresh();
             clearInput();
         }catch (Exception e){
             error.setText(e.getMessage());

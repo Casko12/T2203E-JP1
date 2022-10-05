@@ -32,5 +32,4 @@ public class Controller implements Initializable {
         subjectList.add(new SubjectList("002","HTML CSS","17h30"));
         lv.setItems(subjectList);
     }
-
 }
