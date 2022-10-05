@@ -20,4 +20,5 @@ public class Controller {
     }
     public ListView <SubjectList> lv;
     private ObservableList<SubjectList> subjectList = FXCollections.observableArrayList();
+
 }
