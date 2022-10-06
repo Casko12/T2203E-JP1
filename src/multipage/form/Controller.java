@@ -25,7 +25,7 @@ public class Controller {
     public TextField txtHours;
     public Text error;
 //    public ListView<SubjectList> lv;
-//    public ObservableList<SubjectList> subjectList = FXCollections.observableArrayList();
+//    private ObservableList<SubjectList> subjectList = FXCollections.observableArrayList();
 
     public void addSubject(){
         try{
