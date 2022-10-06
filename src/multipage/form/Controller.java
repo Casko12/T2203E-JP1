@@ -27,11 +27,16 @@ public class Controller {
 
     public void addSubject(){
         try{
+            int hours = Integer.parseInt(txtHours.getText());
             error.setVisible(false);
             if(txtCode.getText().isEmpty() || txtName.getText().isEmpty() || txtHours.getText().isEmpty() ){
                 throw new Exception("Vui lòng điền đầy đủ thông tin!");
             }
             clearInput();
+            for (SubjectList s : multipage.list.Controller.subjectList){
+                if(s.getCode().equals(txtCode.getText()))
+                    throw new Exception("Vui lòng nhập dữ liệu");
+            }
         }catch (Exception e){
             error.setText(e.getMessage());
             error.setVisible(true);
