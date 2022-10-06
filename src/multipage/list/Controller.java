@@ -24,12 +24,12 @@ public class Controller implements Initializable {
         Main.rootStage.setScene(listScene);
     }
     public ListView <SubjectList> lv;
-    private ObservableList<SubjectList> subjectList = FXCollections.observableArrayList();
+    public static ObservableList<SubjectList> subjectList = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        subjectList.add(new SubjectList("001","Java Programing 1","17h30"));
-        subjectList.add(new SubjectList("002","HTML CSS","17h30"));
+        subjectList.add(new SubjectList("001","Java Programing 1",40));
+        subjectList.add(new SubjectList("002","HTML CSS",30));
         lv.setItems(subjectList);
     }
 }

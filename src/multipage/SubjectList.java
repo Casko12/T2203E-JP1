@@ -7,7 +7,7 @@ import javafx.scene.control.ListView;
 public class SubjectList {
     String code;
     String name;
-    String hours;
+    Integer hours;
 
     public SubjectList() {
     }
@@ -28,15 +28,15 @@ public class SubjectList {
         this.name = name;
     }
 
-    public String getHours() {
+    public Integer getHours() {
         return hours;
     }
 
-    public void setHours(String hours) {
+    public void setHours(Integer hours) {
         this.hours = hours;
     }
 
-    public SubjectList(String code, String name, String hours) {
+    public SubjectList(String code, String name, Integer hours) {
         this.code = code;
         this.name = name;
         this.hours = hours;
