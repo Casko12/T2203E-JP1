@@ -37,6 +37,8 @@ public class Controller {
                 if(s.getCode().equals(txtCode.getText()))
                     throw new Exception("Vui lòng nhập dữ liệu");
             }
+            multipage.list.Controller.subjectList.add(new SubjectList(txtCode.getText(),txtName.getText(),hours));
+            backToList(null);
         }catch (Exception e){
             error.setText(e.getMessage());
             error.setVisible(true);
