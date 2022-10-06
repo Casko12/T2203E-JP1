@@ -32,7 +32,6 @@ public class Controller {
             if(txtCode.getText().isEmpty() || txtName.getText().isEmpty() || txtHours.getText().isEmpty() ){
                 throw new Exception("Vui lòng điền đầy đủ thông tin!");
             }
-            clearInput();
             for (SubjectList s : multipage.list.Controller.subjectList){
                 if(s.getCode().equals(txtCode.getText()))
                     throw new Exception("Vui lòng nhập dữ liệu");
@@ -43,10 +42,5 @@ public class Controller {
             error.setText(e.getMessage());
             error.setVisible(true);
         }
-    }
-    public void clearInput() {
-        txtCode.setText("");
-        txtName.setText("");
-        txtHours.setText("");
     }
 }

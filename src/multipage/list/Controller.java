@@ -28,8 +28,8 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        subjectList.add(new SubjectList("001","Java Programing 1",40));
-        subjectList.add(new SubjectList("002","HTML CSS",30));
+//        subjectList.add(new SubjectList("001","Java Programing 1",40));
+//        subjectList.add(new SubjectList("002","HTML CSS",30));
         lv.setItems(subjectList);
     }
 }

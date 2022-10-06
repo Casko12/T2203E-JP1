@@ -42,6 +42,6 @@ public class SubjectList {
         this.hours = hours;
     }
     public String toString(){
-        return getCode()+"-"+getName()+"-"+getHours()+"\n";
+        return getCode()+"-"+getName()+"-"+getHours();
     }
 }
