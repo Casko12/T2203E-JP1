@@ -23,9 +23,18 @@ public class Controller implements Initializable {
         Main.rootStage.setTitle("Thêm môn học");
         Main.rootStage.setScene(listScene);
     }
+    public void goToEdit(ActionEvent actionEvent) throws Exception {
+        editItem = lv.getSelectionModel().getSelectedItem();
+        if(editItem == null) return;
+        Parent listPage = FXMLLoader.load(getClass().getResource("../edit/Form.fxml"));
+        Scene listScene = new Scene(listPage,800,600);
+
+        Main.rootStage.setTitle("Chỉnh sửa môn học");
+        Main.rootStage.setScene(listScene);
+    }
     public ListView <SubjectList> lv;
     public static ObservableList<SubjectList> subjectList = FXCollections.observableArrayList();
-
+    public static SubjectList editItem;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 //        subjectList.add(new SubjectList("001","Java Programing 1",40));
