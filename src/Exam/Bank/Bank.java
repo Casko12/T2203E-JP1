@@ -8,6 +8,11 @@ public class Bank {
     public Bank() {
     }
 
+    public Bank(double balance, double rate) {
+        this.balance = balance;
+        this.rate = rate;
+    }
+
     public double getBalance() {
         return balance;
     }
@@ -24,10 +29,6 @@ public class Bank {
         this.rate = rate;
     }
 
-    public Bank(double balance, double rate) {
-        this.balance = balance;
-        this.rate = rate;
-    }
     public double calculateInterest () {
 
         return balance*(rate/1200);
