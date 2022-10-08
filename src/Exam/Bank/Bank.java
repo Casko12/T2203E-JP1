@@ -4,7 +4,6 @@ public class Bank {
     public double balance;
     public double rate;
 
-
     public Bank() {
     }
 
@@ -30,8 +29,6 @@ public class Bank {
     }
 
     public double calculateInterest () {
-
         return balance*(rate/1200);
     }
-
 }
