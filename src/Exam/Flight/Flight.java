@@ -20,5 +20,15 @@ public class Flight {
         return destination;
     }
 
+    public void setNumber(int number) {
+        this.number = number;
+    }
 
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public void display(){
+    System.out.println(getNumber()+","+getDestination());
+    }
 }
